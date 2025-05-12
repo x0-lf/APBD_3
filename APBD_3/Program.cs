@@ -28,7 +28,7 @@ public class Program
             app.MapOpenApi();
         }
 
-        app.UseHttpsRedirection();
+        //app.UseHttpsRedirection(); oh really??
 
         app.UseAuthorization();
 
