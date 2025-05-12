@@ -1,3 +1,7 @@
+using APBD_3.Data;
+using APBD_3.Repositories;
+using APBD_3.Services;
+
 namespace APBD_3;
 
 public class Program
@@ -7,7 +11,12 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
         
         builder.Services.AddControllers();
-        //builder.Services.AddScoped<>
+        
+        //Register of Connection for SQL Factory - why not? :D
+        builder.Services.AddScoped<IDbConnectionFactory, DbConnectionFactory>();
+        //DB related
+        builder.Services.AddScoped<ITripsRepository, TripsRepository>();
+        builder.Services.AddScoped<ITripsService, TripsService>();
 
         builder.Services.AddOpenApi();
 
