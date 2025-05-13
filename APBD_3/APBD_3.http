@@ -2,3 +2,7 @@
 
 GET {{APBD_3_HostAddress}}/api/trips
 Accept: application/json
+
+### Get trips for client with ID 1
+GET {{APBD_3_HostAddress}}/clients/1/trips
+Accept: application/json

@@ -7,7 +7,7 @@ namespace APBD_3.Repositories;
 public class TripsRepository : ITripsRepository
 {
     private readonly IDbConnectionFactory _dbConnectionFactory;
-    
+
     public TripsRepository(IDbConnectionFactory dbConnectionFactory)
     {
         _dbConnectionFactory = dbConnectionFactory;
@@ -66,4 +66,6 @@ public class TripsRepository : ITripsRepository
 
         return tripsDict.Values.ToList();
     }
+
+
 }

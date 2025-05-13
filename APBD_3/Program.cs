@@ -18,6 +18,10 @@ public class Program
         builder.Services.AddScoped<ITripsRepository, TripsRepository>();
         builder.Services.AddScoped<ITripsService, TripsService>();
 
+        //DB related
+        builder.Services.AddScoped<IClientRepository, ClientRepository>();
+        builder.Services.AddScoped<IClientService, ClientService>();
+        
         builder.Services.AddOpenApi();
 
         var app = builder.Build();
