@@ -74,8 +74,27 @@ public class ClientRepository : IClientRepository
         return tripsDict.Count > 0 ? tripsDict.Values.ToList() : null;
     }
 
-    public Task<int> AddClientAsync(CreateClientDto client)
+    public async Task<int> AddClient(CreateClientDto client)
     {
-        throw new NotImplementedException();
+        string query = @"
+        INSERT INTO Client (FirstName, LastName, Email, Telephone, Pesel)
+        VALUES (@FirstName, @LastName, @Email, @Telephone, @Pesel);
+        SELECT SCOPE_IDENTITY();
+    ";
+
+        using (SqlConnection connection = _dbConnectionFactory.CreateConnection())
+        using (SqlCommand command = new SqlCommand(query, connection))
+        {
+            command.Parameters.AddWithValue("@FirstName", client.FirstName);
+            command.Parameters.AddWithValue("@LastName", client.LastName);
+            command.Parameters.AddWithValue("@Email", client.Email);
+            command.Parameters.AddWithValue("@Telephone", client.Telephone);
+            command.Parameters.AddWithValue("@Pesel", client.Pesel);
+
+            await connection.OpenAsync();
+            var result = await command.ExecuteScalarAsync();
+            return Convert.ToInt32(result);
+        }
     }
+
 }

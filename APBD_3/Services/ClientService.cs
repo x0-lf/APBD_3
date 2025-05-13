@@ -16,4 +16,9 @@ public class ClientService : IClientService
     {
         return await _clientRepository.GetTripsForClient(clientId);
     }
+
+    public async Task<int> AddClient(CreateClientDto client)
+    {
+        return await _clientRepository.AddClient(client);
+    }
 }

@@ -5,5 +5,5 @@ namespace APBD_3.Repositories;
 public interface IClientRepository
 {
     Task<List<ClientTripDto>> GetTripsForClient(int clientId);
-    Task<int> AddClientAsync(CreateClientDto client);
+    Task<int> AddClient(CreateClientDto client);
 }
