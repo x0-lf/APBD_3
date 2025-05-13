@@ -14,4 +14,8 @@
     <PropertyGroup>
         <RootNamespace>APBD_3</RootNamespace>
     </PropertyGroup>
+    
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
 </Project>

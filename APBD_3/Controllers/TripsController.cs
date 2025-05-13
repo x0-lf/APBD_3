@@ -15,6 +15,18 @@ public class TripsController : ControllerBase
         _tripsService = tripsService;
     }
 
+    /// <summary>
+    /// GET /api/trips
+    /// Retrieves all available trips along with basic details:
+    /// - Trip ID, name, description, date range, and max participants.
+    /// Also includes a list of destination countries for each trip.
+    /// </summary>
+    /// <remarks>
+    /// SQL joins:
+    /// - Trip + Country_Trip + Country
+    /// Grouped in memory to aggregate countries into a single trip object.
+    /// </remarks>
+
     [HttpGet]
     public async Task<IActionResult> GetAllTripsDetails()
     {

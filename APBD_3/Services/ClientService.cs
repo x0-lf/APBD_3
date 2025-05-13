@@ -21,4 +21,14 @@ public class ClientService : IClientService
     {
         return await _clientRepository.AddClient(client);
     }
+
+    public async Task<RegisteredTripDto?> RegisterClientToTrip(int clientId, int tripId)
+    {
+        return await _clientRepository.RegisterClientToTrip(clientId, tripId);
+    }
+    
+    public async Task<DeletedClientTripDto?> DeleteClientTrip(int clientId, int tripId)
+    {
+        return await _clientRepository.DeleteClientTrip(clientId, tripId);
+    }
 }

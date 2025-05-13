@@ -20,4 +20,11 @@ Content-Type: application/json
   "pesel": "7505052566"
 }
 
-###
+### Register client id 1 to trip id 2
+
+PUT http://localhost:5000/clients/1/trips/2
+Accept: application/json
+
+### Delete the registered trip 2 for client id 1
+DELETE http://localhost:5000/clients/1/trips/2
+Accept: application/json
