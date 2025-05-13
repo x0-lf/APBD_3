@@ -13,7 +13,7 @@ public class ClientRepository : IClientRepository
         _dbConnectionFactory = dbConnectionFactory;
     }
 
-    public async Task<List<ClientTripDto>?> GetTripsForClient(int clientId)
+    public async Task<List<ClientTripDto>> GetTripsForClient(int clientId)
     {
         string query = @"
         SELECT 
@@ -72,5 +72,10 @@ public class ClientRepository : IClientRepository
         }
 
         return tripsDict.Count > 0 ? tripsDict.Values.ToList() : null;
+    }
+
+    public Task<int> AddClientAsync(CreateClientDto client)
+    {
+        throw new NotImplementedException();
     }
 }
