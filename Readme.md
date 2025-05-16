@@ -138,3 +138,6 @@ You can easily change it at the same file by modifying the `APBD_3_HostAddress` 
   }
 }
 ```
+
+**[APBD_4 – Warehouse Management](https://github.com/x0-lf/APBD_4)**  
+A more advanced yet similar to this project, implementing stored procedures, better layered architecture.
