@@ -1,5 +1,5 @@
 ﻿
-## APBD_3 Task 8
+## APBD_3 Warehouse Management
 
 ## API Endpoints
 
@@ -138,6 +138,18 @@ You can easily change it at the same file by modifying the `APBD_3_HostAddress` 
   }
 }
 ```
+---
+Previous Projects in the Series
+
+**[APBD_1 - Simple yet Advanced Logistics Manager Example](https://github.com/x0-lf/APBD_1)**
+
+**[APBD_2 - Simple 20 LINQ xUnit Tests](https://github.com/x0-lf/APBD_2)**
+
+Next Projects in the Series
 
 **[APBD_4 – Warehouse Management](https://github.com/x0-lf/APBD_4)**  
 A more advanced yet similar to this project, implementing stored procedures, better layered architecture.
+
+**[APBD_5 - EF (Code First) App that helps to manage prescriptions](https://github.com/x0-lf/APBD_5)**
+
+**[APBD_6 – EF (Database First) Client and Trip Management API](https://github.com/x0-lf/APBD_6)**
