@@ -139,13 +139,13 @@ You can easily change it at the same file by modifying the `APBD_3_HostAddress` 
 }
 ```
 ---
-Previous Projects in the Series
+### Previous Projects in the Series
 
 **[APBD_1 - Simple yet Advanced Logistics Manager Example](https://github.com/x0-lf/APBD_1)**
 
 **[APBD_2 - Simple 20 LINQ xUnit Tests](https://github.com/x0-lf/APBD_2)**
 
-Next Projects in the Series
+### Next Projects in the Series
 
 **[APBD_4 – Warehouse Management](https://github.com/x0-lf/APBD_4)**  
 A more advanced yet similar to this project, implementing stored procedures, better layered architecture.
